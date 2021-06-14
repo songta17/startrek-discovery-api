@@ -5,6 +5,7 @@ puts "Reset database..."
 
 Character.destroy_all
 Episode.destroy_all
+Message.destroy_all
 
 puts "Add new character..."
 
@@ -38,7 +39,7 @@ character = [
   {
     name: "Saru",
     status: "Alive",
-    born: nil,
+    born: 2226,
     species: "kelpien",
     planet: "Kaminar",
     occupations: [
@@ -62,7 +63,6 @@ character = [
   }
 ]
  
-
 character.each do |attributes|
     character = Character.create!(attributes)
     puts "Character : #{character.name} created !"

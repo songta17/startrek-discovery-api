@@ -9,7 +9,6 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.string :occupations, array: true, :default => []
       t.string :description
       t.string :gender
-      t.string :image
       t.string :episode, array: true, :default => []
       t.string :url
 

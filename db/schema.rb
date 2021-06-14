@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_12_140933) do
+ActiveRecord::Schema.define(version: 2021_06_13_075813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2021_06_12_140933) do
     t.string "occupations", default: [], array: true
     t.string "description"
     t.string "gender"
-    t.string "image"
     t.string "episode", default: [], array: true
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
@@ -58,6 +57,12 @@ ActiveRecord::Schema.define(version: 2021_06_12_140933) do
     t.string "episode"
     t.string "characters", default: [], array: true
     t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "mess"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
